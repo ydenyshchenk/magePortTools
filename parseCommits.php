@@ -60,4 +60,4 @@ foreach ($branches as $branch) {
     error_log($branch . ' OK', 0);
 }
 
-error_log("BRANCHES:\n" . implode("\n", $branches), $diffFileDir . DS . 'branches.log');
+file_put_contents("BRANCHES:\n" . implode("\n", $branches), $diffFileDir . DS . 'branches.log');
